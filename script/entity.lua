@@ -22,7 +22,7 @@ local function setupGlobals()
 end
 
 local function onRotated(e)
-    if e.entity and e.entity.name == "signal-filter-combinator" then
+    if e.entity and e.entity.name == "epicombinator" then
         local output_entity = getEntity(e.entity.unit_number).output_entity
         output_entity.teleport(getOutputPosition(e.entity))
         output_entity.direction = e.entity.direction
@@ -31,8 +31,8 @@ end
 
 local function onBuiltEntity(e)
     if 
-        (e.created_entity and e.created_entity.name == "signal-filter-combinator") or
-        (e.entity and e.entity.name == "signal-filter-combinator")
+        (e.created_entity and e.created_entity.name == "epicombinator") or
+        (e.entity and e.entity.name == "epicombinator")
     then
         local main_entity = e.created_entity or e.entity
 
@@ -71,7 +71,7 @@ local function onBuiltEntity(e)
 end
 
 local function onMinedEntity(e)
-    if not (e.entity and e.entity.name == "signal-filter-combinator") then return end
+    if not (e.entity and e.entity.name == "epicombinator") then return end
 
     getEntity(e.entity.unit_number).output_entity.destroy({raise_destroy = false})
 
@@ -86,7 +86,7 @@ end
 script.on_init(setupGlobals)
 script.on_configuration_changed(setupGlobals)
 
-local filter = {{filter = "name", name = "signal-filter-combinator"}}
+local filter = {{filter = "name", name = "epicombinator"}}
 
 script.on_event(defines.events.on_built_entity, onBuiltEntity, filter)
 script.on_event(defines.events.on_robot_built_entity, onBuiltEntity, filter)

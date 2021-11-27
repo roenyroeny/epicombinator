@@ -1,6 +1,6 @@
 
 local function on_gui_opened(e)
-	if not (e.entity and e.entity.name == 'signal-filter-combinator') then return end
+	if not (e.entity and e.entity.name == 'epicombinator') then return end
 	
     if not getEntity(e.entity.unit_number) then return end
 	
@@ -17,7 +17,7 @@ local function on_gui_opened(e)
     gui_elements.frame = frame
 
     local vertical_flow_1 = frame.add{type="frame", style="item_and_count_select_background", direction="horizontal"}
-    vertical_flow_1.add{type="label", style="heading_2_label", caption={"gui.control-wire"}, tooltip={"gui.control-wire-tooltip"}}
+    vertical_flow_1.add{type="label", style="heading_2_label", caption={"gui.output-count"}, tooltip={"gui.output-count-tooltip"}}
     gui_elements.switch = vertical_flow_1.add{
         type="slider",
         name="control-wire-switch",

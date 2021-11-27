@@ -1,5 +1,5 @@
 data:extend{{
-    name = "signal-filtering",
+    name = "epicombinator",
     type = "technology",
     icon = "__epicombinator__/graphics/technology/epicombinator.png",
     icon_mipmaps = 0,
@@ -11,7 +11,7 @@ data:extend{{
     effects = {
         {
             type = "unlock-recipe",
-            recipe = "signal-filter-combinator"
+            recipe = "epicombinator"
         }
     },
     unit = {

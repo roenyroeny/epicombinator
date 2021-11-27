@@ -60,8 +60,8 @@ local full_display_sprite = {
 	}
 }
 
-main.name = "signal-filter-combinator"
-main.minable.result = "signal-filter-combinator"
+main.name = "epicombinator"
+main.minable.result = "epicombinator"
 main.and_symbol_sprites = full_display_sprite
 main.divide_symbol_sprites = full_display_sprite
 main.left_shift_symbol_sprites = full_display_sprite
@@ -73,7 +73,7 @@ main.plus_symbol_sprites = full_display_sprite
 main.power_symbol_sprites = full_display_sprite
 main.right_shift_symbol_sprites = full_display_sprite
 main.xor_symbol_sprites = full_display_sprite
-main.icon = "__epicombinator__/graphics/icons/filter-combinator.png"
+main.icon = "__epicombinator__/graphics/icons/epicombinator.png"
 
 local blank_sprite = {
 	filename = "__epicombinator__/graphics/entities/blank.png",
