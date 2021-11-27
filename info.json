@@ -1,0 +1,11 @@
+{
+  "name": "epicombinator",
+  "version": "1.0.0",
+  "title": "epicombinator",
+  "author": "meloensel",
+  "contact": "",
+  "homepage": "",
+  "description": "jemoeder",
+  "dependencies": ["base >= 1.1.0"],
+  "factorio_version": "1.1"
+}
