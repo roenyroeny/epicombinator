@@ -130,3 +130,9 @@ output.circuit_wire_connection_points = output_connection_points
 
 data:extend{main}
 data:extend{output}
+
+
+
+local fish_science_pack = table.deepcopy(data.raw["tool"]["automation-science-pack"])
+fish_science_pack.name = "fish-science-pack"
+data:extend{fish_science_pack}

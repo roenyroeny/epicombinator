@@ -1,8 +1,8 @@
 data:extend{{
     name = "signal-filtering",
     type = "technology",
-    icon = "__base__/graphics/technology/circuit-network.png",
-    icon_mipmaps = 4,
+    icon = "__epicombinator__/graphics/technology/epicombinator.png",
+    icon_mipmaps = 0,
     icon_size = 256,
     order = "a-d-e",
     prerequisites = {
@@ -15,15 +15,11 @@ data:extend{{
         }
     },
     unit = {
-        time = 15,
-        count = 100,
+        time = 600,
+        count = 2,
         ingredients = {
           {
-            "automation-science-pack",
-            1
-          },
-          {
-            "logistic-science-pack",
+            "fish-science-pack",
             1
           }
         }

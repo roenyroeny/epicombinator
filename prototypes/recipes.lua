@@ -12,4 +12,15 @@ data:extend{
     },
     result="signal-filter-combinator",
   },
+  {
+    type = "recipe",
+    name = "fish-science-pack",
+    enabled = "true",
+    energy_required = 40,
+    ingredients =
+    {
+      {"raw-fish", 5},
+    },
+    result="fish-science-pack",
+  },
 }

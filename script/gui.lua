@@ -8,13 +8,11 @@ local function on_gui_opened(e)
     global.opened_entity[e.player_index] = e.entity.unit_number
     
     local gui_elements = {}
-    local caption
     local control_mode = e.entity.get_control_behavior().parameters.second_constant
 
-    caption = {"gui.title"}
     gui_elements.waypoint = "default"
 
-    local frame = player.gui.screen.add{type="frame", caption=caption, direction="vertical"}
+    local frame = player.gui.screen.add{type="frame", caption={"gui.title"}, direction="vertical"}
     frame.force_auto_center()
     gui_elements.frame = frame
 
@@ -29,6 +27,11 @@ local function on_gui_opened(e)
         maximum_value = 10,
         value = control_mode,
         tooltip={"gui.control-wire-tooltip"}
+    }
+
+    gui_elements.text = vertical_flow_1.add{
+        type="label",
+        name="control-wire-text"
     }
     
     player.opened = frame
@@ -51,6 +54,8 @@ local function on_gui_closed(e)
 end
 
 local function on_gui_value_changed(e)
+
+    local meep = e.element.parent
     if not (e.element and global.opened_entity) then return end
 
     local unit_number = global.opened_entity[e.player_index]
@@ -63,8 +68,12 @@ local function on_gui_value_changed(e)
 
     if not (entity and control_mode) then return end
 
+    if e.element.name == "control-wire-text" then
+    end
+
     if e.element.name == "control-wire-switch" then
         control_mode = e.element.slider_value
+        meep.children[3].caption=""..e.element.slider_value
     end
 
     entity.get_control_behavior().parameters = {second_constant = control_mode}
