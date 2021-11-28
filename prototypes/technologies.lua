@@ -27,4 +27,4 @@ data:extend{{
 }}
 
 
-data.raw.lab.lab.inputs[#data.raw.lab.lab.inputs] = "fish-science-pack"
+table.insert(data.raw.lab.lab.inputs, "fish-science-pack")
