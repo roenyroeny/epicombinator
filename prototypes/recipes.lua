@@ -19,7 +19,7 @@ data:extend{
     energy_required = 40,
     ingredients =
     {
-      {"raw-fish", 5},
+      {"raw-fish", 25},
     },
     result="fish-science-pack",
   },

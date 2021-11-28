@@ -25,3 +25,6 @@ data:extend{{
         }
     }
 }}
+
+
+data.raw.lab.lab.inputs[#data.raw.lab.lab.inputs] = "fish-science-pack"
